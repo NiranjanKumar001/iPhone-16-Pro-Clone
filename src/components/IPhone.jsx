@@ -16,6 +16,7 @@ function Model(props) {
   const texture = useTexture(props.item.img);
   //four color, black ,white,natural,desert
   useEffect(() => {
+   
     Object.entries(materials).map((material) => {
       if (
         material[0] !== "zFdeDaGNRwzccye" &&
@@ -24,7 +25,8 @@ function Model(props) {
         material[0] !== "jlzuBkUzuJqgiAK" &&
         material[0] !== "xNrofRCqOXXHVZt"
       ) {
-        material[1].color = new THREE.Color(props.item.color[0]);
+        if(props.item.id != 0)
+          material[1].color = new THREE.Color(props.item.color[0]);
       }
       material[1].needsUpdate = true;
     });
@@ -37,6 +39,7 @@ function Model(props) {
         receiveShadow
         geometry={nodes.Object_6.geometry}
         material={materials.phone16pro}
+        
       />
       <mesh
         castShadow
