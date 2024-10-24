@@ -2,7 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ModelView from "./ModelView";
 import { useEffect, useRef, useState } from "react";
-import { yellowImg } from "../utils";
+import { yellowImg, ic4Img } from "../utils";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { View } from "@react-three/drei";
@@ -13,6 +13,7 @@ import { div } from "three/examples/jsm/nodes/Nodes.js";
 const Model = () => {
   const [size, setSize] = useState("small");
   const [model, setModel] = useState({
+    id: 0,
     title: "15.93 cm (6.3″) iPhone 16 Pro in four colours",
     color: ["#8F8A81", "#FFE7B9", "#6F6C64"],
     img: yellowImg,
@@ -34,6 +35,7 @@ const Model = () => {
 
   const t1 = gsap.timeline();
   useEffect(() => {
+    debugger;
     if (size === "large") {
       animateWithGsapTimeline(t1, small, smallRotation, "#view1", "#view2", {
         transform: "translateX(-100%)",
@@ -102,25 +104,40 @@ const Model = () => {
         </h1>
         <div className="flex flex-col items-center mt-5">
           <div className="w-full h-[75vh] md:h-[90vh] overflow-hidden relative">
-            <ModelView
-              index={2}
-              groupRef={large}
-              gsapType="view2"
-              controlRef={cameraControlLarge}
-              setRotationState={setLargeRotation}
-              item={model}
-              size={size}
+          {model.id === 0 ? (
+             <img
+             src={ic4Img}
+              style={{
+                display: "block",      
+                margin: "0 auto",       
+                textAlign: "center"    
+              }}
             />
+            ) : (
+              <>
+                {}
+                <ModelView
+                  index={2}
+                  groupRef={large}
+                  gsapType="view2"
+                  controlRef={cameraControlLarge}
+                  setRotationState={setLargeRotation}
+                  item={model}
+                  size={size}
+                />
 
-            <ModelView
-              index={1}
-              groupRef={small}
-              gsapType="view1"
-              controlRef={cameraControlSmall}
-              setRotationState={setSmallRotation}
-              item={model}
-              size={size}
-            />
+                <ModelView
+                  index={1}
+                  groupRef={small}
+                  gsapType="view1"
+                  controlRef={cameraControlSmall}
+                  setRotationState={setSmallRotation}
+                  item={model}
+                  size={size}
+                />
+              </>
+            )}
+
 
             <Canvas
               className="w-full h-full"
@@ -131,7 +148,8 @@ const Model = () => {
                 left: 0,
                 right: 0,
                 overflow: "hidden",
-              }}
+              }
+            }
               eventSource={document.getElementById("root")}
             >
               <View.Port />
@@ -155,7 +173,8 @@ const Model = () => {
                       key={i}
                       className={`w-6 h-6 rounded-full shadow-top ${model.title === item.title ? 'border-sky-50' : ''} border-2`}
                       style={{ backgroundColor: item.color[0] }}
-                      onClick={() => setModel(item)}
+                      onClick={() =>
+                        setModel(item)}
                       />
                     </div> 
                   </div>
