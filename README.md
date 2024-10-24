@@ -86,6 +86,12 @@ If you have any questions or inquiries regarding the iPhone 16 Pro clone, feel f
    
 <br/>
 
+## ❤️Contributors
+
+<p align='center'><a href="https://github.com/NiranjanKumar001/iPhone-16-Pro-Clone/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=NiranjanKumar001/iPhone-16-Pro-Clone" />
+</a></p>
+
   ## 🙏 **Acknowledgments**
 
 Special thanks to [**Adrian Hajdin**](https://github.com/adrianhajdin) for his insightful iPhone 15 tutorial, which greatly assisted in the development of this project. This project is intended for educational purposes only.
