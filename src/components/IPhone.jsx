@@ -15,6 +15,7 @@ function Model(props) {
 
   const texture = useTexture(props.item.img);
   //four color, black ,white,natural,desert
+
   useEffect(() => {
     Object.entries(materials).map((material) => {
       if (
@@ -29,6 +30,19 @@ function Model(props) {
       material[1].needsUpdate = true;
     });
   }, [materials, props.item]);
+
+ // Clean up texture when the component is unmounted to prevent memory leaks
+ useEffect(() => {
+  return () => {
+    if (texture) texture.dispose();
+  };
+}, [texture]);
+
+// Ensure nodes exist before rendering the meshes
+if (!nodes) {
+  return <div>Loading...</div>; // Optional loading state while the model loads
+}
+
 
   return (
     <group {...props} dispose={null}>

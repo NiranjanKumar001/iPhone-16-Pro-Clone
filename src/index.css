@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -125,4 +126,128 @@ canvas {
 .buy-btn {
   background-color: #086fda;
   font-weight: 400;
+}
+
+
+
+
+/* SUPPORT SECTION */
+
+.hero-banner-container {
+  position: relative;
+  width: 100%;
+ /* Full viewport height */
+  overflow: hidden; /* Ensure the image doesn't overflow beyond its container */
+}
+.hero-banner-image {
+  position: relative;
+  top: 0;
+  left: 0;
+  /* width: 100%;
+  height: 100%;
+  object-fit: fill; */
+  transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+  z-index: -1;
+}
+
+
+/* Default zoom: when the window is at its default size (e.g., 100%) */
+@media (min-width: 1000px) {
+  .hero-banner-image {
+    transform: scale(1.15); /* Slight zoom for default view */
+  }
+}
+
+/* When the window width is reduced (e.g., at 80% window width) */
+@media (max-width: 80vw) {
+  .hero-banner-image {
+    transform: scale(1); /* Fit the image entirely */
+  }
+}
+
+/* When the window width exceeds a certain size, zoom in the image */
+@media (min-width: 110vw) {
+  .hero-banner-image {
+    transform: scale(1.3); /* Zoom in on the image */
+  }
+}
+
+
+/* PRODUCT ITEMS APPLE PRODUCTS */
+
+.apple-support-products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-top: 20px;
+  /* background: #f6f1f1; */
+  /* top: 20px; */
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px; /* Set a fixed width for uniform size */
+  height: 160px; /* Set a fixed height for uniform size */
+  text-align: center;
+  /* background-color: #1c1c1e; Background color for product items */
+  padding: 10px;
+  border-radius: 10px; /* Rounded corners */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); Add some shadow */
+  transition: transform 0.3s ease; /* Smooth hover animation */
+}
+
+
+.product-image {
+  width: 80%; /* Make the image fill the container width */
+  height: 60%; /* Let the image take up most of the container */
+  object-fit: contain; /* Keep the image's aspect ratio */
+  margin-bottom: 10px; /* Add spacing between image and text */
+}
+
+.product-title {
+  font-size: 14px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.6s ease left;
+  cursor: pointer;
+}
+.product-title:hover{
+text-decoration: underline;
+}
+
+/* Support Content Styling */
+.support-content {
+  background-color: rgb(1, 1, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  top: 40px; /* Adjust as needed to position below the navbar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.support-content h1{
+  font-size: 70px;
+  font-weight: 600;
+font-style: initial;
+text-align: center;
+font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.support-content h1, .support-content h2 {
+  margin-top: 0;
+}
+
+.support-content p {
+  font-size: 14px;
+  color: gray;
 }
