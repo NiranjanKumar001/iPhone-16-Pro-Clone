@@ -179,7 +179,7 @@ canvas {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
   margin-top: 20px;
   /* background: #f6f1f1; */
@@ -190,7 +190,7 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+ 
   width: 120px; /* Set a fixed width for uniform size */
   height: 160px; /* Set a fixed height for uniform size */
   text-align: center;
@@ -220,6 +220,73 @@ canvas {
 .product-title:hover{
 text-decoration: underline;
 }
+
+/* Apple support support section  */
+/* Support Sections Container */
+.apple-support-sections {
+  display: flex;
+  /* justify-content: space-evenly; Distribute space evenly between items */
+  gap: 20px; /* Optional: Space between sections */
+  margin-top: 30px;
+margin-left: 330px;
+  flex-wrap: wrap;
+}
+
+/* Support Section Items */
+.support-item {
+  text-align: center; /* Center the text below the image */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #191919; /* Dark background */
+  width: 300px;
+  height: 200px;
+  border-radius: 10%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Stack the image and text vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center content vertically */
+  box-sizing: border-box; /* Ensures padding doesn't affect width/height */
+  box-shadow: 5px 7px 15px #3e3e3e;
+}
+
+/* Hover Effect */
+.support-item:hover {
+  transform: scale(1.01); /* Slightly zoom the box */
+  /* background-color: #444; Darken background on hover */
+}
+
+/* Section Title */
+.section-title {
+  font-size: 16px;
+  font-weight: 460;
+  color: #007bff;
+  margin-top: 10px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+  text-decoration: none; /* Remove underline by default */
+}
+
+/* Hover Effect on Title */
+.support-item:hover .section-title {
+  text-decoration: underline; /* Underline text on hover */
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Support Item Image */
+.support-item img {
+  width: 60px; /* Adjust image size */
+  height: 60px; /* Ensure the images are square */
+  object-fit: contain; /* Maintain aspect ratio */
+  transition: transform 0.3s ease;
+  margin-bottom: 10px; /* Add space between image and title */
+}
+
+/* Hover Effect for Images */
+.support-item:hover img {
+  transform: scale(1.1); /* Slightly zoom in the image on hover */
+}
+
+
 
 /* Support Content Styling */
 .support-content {

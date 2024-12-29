@@ -4,10 +4,7 @@ import Footer from '../Footer'
 import IPhone from '../IPhone'
 import '/Dev-Env/open-contributions/iPhone-16-Pro/src/index.css'
 
-
-
 // Apple Products for content support
-
 const products = [
   { id: 1, name: 'iPhone', img: 'assets/images/image-grid-iphone-tn_2x.png' },
   { id: 2, name: 'Mac', img: 'assets/images/image-grid-mac-tn_2x.png' },
@@ -16,11 +13,16 @@ const products = [
   { id: 5, name: 'Vision', img: 'public/assets/images/image-grid-apple-vision-pro_2x.png' },
   { id: 6, name: 'AirPods', img: 'public/assets/images/image-grid-airpods_2x.png' },
   { id: 7, name: 'TV', img: 'public/assets/images/image-grid-tv_2x.png' },
- 
+];
+
+// Apple Support Sections for content
+const supportSections = [
+  { id: 1, name: 'Forgot Apple Account Password', img:'public/assets/images/tile-topic-password_2x.svg' },
+  { id: 2, name: 'Apple Repair' ,img:'public/assets/images/tile-topic-repair_2x.svg'},
+  { id: 3, name: 'Billings and Subscriptions' ,img:'public/assets/images/tile-topic-billing_2x.svg' },
 ];
 
 const Support = () => {
-
   return (
     <div>
       <Navbar />
@@ -34,23 +36,30 @@ const Support = () => {
         />
       </div>
 
-
       <div className="support-content">
         <div className="apple-support">
           <h1>Apple Support</h1>
           {/* <p>Here you can find all support-related information, including troubleshooting, FAQs, and product manuals.</p> */}
 
           <div className="apple-support-products">
-
-          {products.map((product) => (
+            {products.map((product) => (
               <div key={product.id} className="product-item">
                 <img src={product.img} alt={product.name} className="product-image" />
                 <h4 className="product-title">{product.name}</h4>
               </div>
             ))}
-           
           </div>
 
+        </div>
+
+        {/* Apple Support Sections */}
+        <div className="apple-support-sections">
+          {supportSections.map((section) => (
+            <div key={section.id} className="support-item">
+               <img src={section.img} alt={section.name} />
+              <h3 className="section-title">{section.name}</h3>
+            </div>
+          ))}
         </div>
 
         <h2>Get Help</h2>
@@ -59,11 +68,8 @@ const Support = () => {
         <h2>Helpful Topics</h2>
         <p>Check out helpful guides on using Apple products and solving common issues.</p>
       </div>
-
-
-
     </div>
   )
 }
 
-export default Support
+export default Support;
