@@ -9,6 +9,7 @@ import {
   highlightSixthVideo,   // Ensure this video is defined
   // whiteImg,
   yellowImg,
+  ic4Img,
 } from "../utils";
 
 export const navLists = [
@@ -85,6 +86,12 @@ export const hightlightsSlides = [
 ];
 
 export const models = [
+  {
+    id: 0,
+    title: "15.93 cm (6.3″) iPhone 16 Pro in four colours",
+    color: ["rgba(66, 66, 69, 0.8)"],
+    img: yellowImg,
+  },
   {
     id: 1,
     title: "17.43 cm (6.9″) iPhone 16 Pro Max & 15.93 cm (6.3″) iPhone 16 Pro in Natural Titanium",
