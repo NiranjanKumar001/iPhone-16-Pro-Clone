@@ -12,16 +12,37 @@ const Navbar = () => {
                     {navLists.map((nav) => (
 
                         <Link to={`/${nav}`} key={nav}>
+
                             <div
                                 key={nav}
+                                onMouseEnter={() => setHoveredItem(nav)}
+                                onMouseLeave={() => setHoveredItem(null)}
                                 className="px-6 text-sm cursor-pointer text-gray-200 hover:text-white transition-all"
 
                             >
+                                <Link to={`/${nav}`}>
                                 {nav}
+                                </Link>
                             </div>
                         </Link>
                     ))}
+
+                    {/* SUPPORT PAGE */}
+                    {/* Support Hover Section */}
+                    <div className="relative">
+                        {/* Dropdown for Support */}
+                        <div
+                            className="relative"
+                            onMouseEnter={() => setHoverSupport(true)}  // Set hover state to true when hovering
+                            onMouseLeave={() => setHoverSupport(false)} // Set hover state to false when leaving
+                        >
+                        </div>
+                    </div>
+
+
                 </div>
+
+
                 <div className="flex items-center gap-9">
                     <img
                         src={searchImg}
