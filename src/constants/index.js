@@ -27,62 +27,42 @@ export const navLists = [
 export const hightlightsSlides = [
   {
     id: 1,
-    textLists: [
-      "The first iPhone designed for",
-      "Apple Intelligence. Personal, private,",
-      "powerful.",
-    ],
+    text: "The first iPhone designed for Apple Intelligence. Personal, private, powerful.",
     video: highlightFirstVideo,
     videoDuration: 5, // Duration in seconds
   },
   {
     id: 2,
-    textLists: [
-      "So fast. So fluid. Get a feel for", 
-      "the all-new Camera Control."
-    ],
+    text: "So fast. So fluid. Get a feel for the all-new Camera Control.",
     video: highlightSecondVideo,
     videoDuration: 5, // Duration in seconds
   },
   {
     id: 3,
-    textLists: [
-      "4K 120 fps Dolby Vision.",
-      "4 studio-quality mics.",
-      "A Pro studio in your pocket.",
-    ],
+    text: "4K 120 fps Dolby Vision. 4 studio-quality mics. A Pro studio in your pocket.",
     video: highlightThirdVideo,
     videoDuration: 7, // Duration in seconds
   },
   {
     id: 4,
-    textLists: [
-      "Our thinnest borders yet — for even",
-      "larger displays. Brilliant."
-    ],
+    text: "Our thinnest borders yet — for even larger displays. Brilliant.",
     video: highlightFourthVideo, // Use video instead of image
     videoDuration: 3, // Set an appropriate duration for the video
   },
   {
     id: 5,
-    textLists: [
-      "All-new A18 Pro chip powers",
-      "unrivalled intelligence. And",
-      "unprecedented performance.",
-    ],
+    text: "All-new A18 Pro chip powers unrivalled intelligence. And unprecedented performance.",
     video: highlightFifthVideo, // Use video instead of image
     videoDuration: 7, // Set an appropriate duration for the video
   },
   {
     id: 6,
-    textLists: [
-      "A huge leap in battery life. Game on.",
-      "Experience longer usage without charging."
-    ],
+    text: "A huge leap in battery life. Game on. Experience longer usage without charging.",
     video: highlightSixthVideo, // Use video instead of image
     videoDuration: 3, // Set an appropriate duration for the video
   },
 ];
+
 
 export const models = [
   {

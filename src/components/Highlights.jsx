@@ -19,13 +19,13 @@ const Highlights = () => {
         <div className="mb-8 w-full md:flex items-end justify-between mt-80">
           <h1
             id="title"
-            className="section-heading"
-            style={{ color: "#ffffff", marginBottom: "4rem" }}
+            className="section-heading lg:mb-[4rem] sm:mb-2"
+            style={{ color: "#ffffff" }}
           >
             Get the highlights.
           </h1>
-          <div className="flex flex-wrap items-end gap-5">
-            <p className="link" style={{ marginBottom: "4rem" }}>
+          <div className="flex flex-wrap items-end gap-5 lg:mb-[4rem] sm:mb-2 sm:text-xs">
+            <p className="link">
               Watch the film
               <img src={watchImg} alt="watch" className="ml-2" />
             </p>
